@@ -1,9 +1,15 @@
 body {
-  background-color: #554433;
+  background-image: url("../images/background/background.png");
+  background-color: #321240;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
 }
 
 .sun {
   position: absolute;
+  left: -300px;
+  top: -100px;
 }
 
 .rotate-slow-left {
