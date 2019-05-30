@@ -3,13 +3,24 @@ body {
   background-color: #321240;
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: center;
 }
 
 .sun {
   position: absolute;
   left: -300px;
   top: -100px;
+}
+
+.earth {
+  position: absolute;
+  right: 80px;
+  top: 120px;
+}
+
+@media screen and (max-width: 800px) {
+  .earth {
+    right: 10px;
+  }   
 }
 
 .rotate-slow-left {
