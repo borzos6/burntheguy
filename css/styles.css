@@ -1,33 +1,25 @@
 body {
-	background-color: #554433;
+  background-color: #554433;
 }
 
 .sun {
-	position: absolute;
+  position: absolute;
 }
 
 .rotate-slow-left {
-	animation: spinleft 30s infinite linear;
+  animation: spinleft 30s infinite linear;
 }
 
 .rotate-slow-right {
-	animation: spinright 35s infinite linear;
+  animation: spinright 35s infinite linear;
 }
 
 @keyframes spinleft {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-359deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-359deg); }
 }
 
 @keyframes spinright {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
 }
