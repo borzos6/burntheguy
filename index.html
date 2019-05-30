@@ -9,19 +9,29 @@
   <meta name="author" content="BL">
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
 </head>
 
 <body>
-	<div class="sun">
-		<img src="images/sun/sun-no-ring.png" class="sun">	
-		<img src="images/sun/sun-ring-1.png" class="sun rotate-slow-left">
-		<img src="images/sun/sun-ring-2.png" class="sun rotate-slow-right">
-	</div>
-
   <div class="earth">
+    <img src="images/fireball/fireball2.png" class="fireball" id="fireball">
     <img src="images/earth/earth-and-moon.png" class="earth">
   </div>
-  <script src="js/scripts.js"></script>
+
+  <div class="sun">
+    <img src="images/sun/sun-no-ring.png" class="sun">  
+    <img src="images/sun/sun-ring-1.png" class="sun rotate-slow-left">
+    <img src="images/sun/sun-ring-2.png" class="sun rotate-slow-right">
+  </div>
+
+  <div class="shoot">
+    <div class="shoot button-jittery">
+      <button onclick="shoot()">Shoot!</button>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 
 </html>
