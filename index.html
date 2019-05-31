@@ -14,7 +14,12 @@
 
 <body>
   <div class="earth">
-    <img src="images/fireball/fireball2.png" class="fireball" id="fireball">
+    <!-- <img src="images/fireball/fireball2.png" class="fireball" id="fireball"> -->
+    <div class="rocket">
+      <img src="images/rocket/rocket-flame.png" class="rocket-flame" id="rocket-flame">
+      <img src="images/rocket/rocket.png" class="rocket-body" id="rocket-body">
+    </div>
+    <!-- <img src="images/rocket/rocket-smoke.png" class="rocket-smoke"> -->
     <img src="images/earth/earth-and-moon.png" class="earth">
   </div>
 
@@ -24,9 +29,9 @@
     <img src="images/sun/sun-ring-2.png" class="sun rotate-slow-right">
   </div>
 
-  <div class="shoot">
-    <div class="shoot button-jittery">
-      <button onclick="shoot()">Shoot!</button>
+  <div class="launch">
+    <div class="button button-launch">
+      <button id="button-launch" onclick="launch(this)">Launch!</button>
     </div>
   </div>
 

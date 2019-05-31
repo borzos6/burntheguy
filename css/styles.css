@@ -37,28 +37,52 @@ body {
   top: 60px;
 }
 
-/* FIREBALL */
-.fireball {
-  height: 10px;
-  position: relative;
-  right: 130px;
-  top: 125px;
+/* ROCKET */
+.rocket-body, 
+.rocket-body-flying
+ {
+  position: absolute;
+  height: 40px;
+  right: 148px;
+  top: 115px;
+}
+.rocket-body-flying {
+  animation: rocketfly 480s linear;
 }
 
-.flying {
-  animation: shootwidescreen 480s;
-  animation-timing-function: linear;
-}
-
-@keyframes shootwidescreen {
-  from { right: 130px; }
+@keyframes rocketfly {
+  from { right: 148px; }
   to { right: 4000px; }
 }
 
-/* BUTTON */
-.shoot {
+@keyframes fuelburning {
+  50% { transform: scale(1.2); }
+}
+
+.rocket-flame,
+.rocket-flame-flying  {
   position: absolute;
+  height: 20px;
+  right: 125px;
+  top: 125px;
+}
+.rocket-flame-flying {
+  animation: fuelburning 1s infinite, flamefly 480s linear;
+}
+
+@keyframes flamefly {
+  from { right: 125px; }
+  to { right: 4000px; }
+}
+
+@keyframes fuelburning {
+  50% { transform: scale(1.2); }
+}
+
+/* BUTTON */
+.launch {
   top: 90px;
+  text-align: center;
 }
 
 button {
@@ -75,24 +99,9 @@ button {
   letter-spacing: 2px;
 }
 
-.button-jittery button {
-  animation: jittery 6s infinite;
-}
 
-.button-jittery button:hover {
-  animation: heartbeat 0.4s infinite;
-}
-
-@keyframes jittery {
-  5%,
-  50% { transform: scale(1); }
-  10% { transform: scale(0.9); }
-  15% { transform: scale(1.15); }
-  20% { transform: scale(1.15) rotate(-5deg); }
-  25% { transform: scale(1.15) rotate(5deg); }
-  30% { transform: scale(1.15) rotate(-3deg); }
-  35% { transform: scale(1.15) rotate(2deg); }
-  40% { transform: scale(1.15) rotate(0); }
+.button-launch button {
+  animation: heartbeat 1s infinite;
 }
 
 @keyframes heartbeat {
