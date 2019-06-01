@@ -8,25 +8,26 @@
   <meta name="description" content="Napba lőném">
   <meta name="author" content="László Békéssy">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/bulma-tooltip.min.css">
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 </head>
 
 <body>
   <section>
     <div id="sun-wrapper">
-      <img id="sun" src="images/sun/sun-no-ring.png" class="sun">  
-      <img id="sun-ring-1" src="images/sun/sun-ring-1.png" class="sun rotate-slow-left">
-      <img id="sun-ring-2" src="images/sun/sun-ring-2.png" class="sun rotate-slow-right">  
+      <img id="sun" src="images/sun/sun-no-ring.png" class="sun" alt="sun">  
+      <img id="sun-ring-1" src="images/sun/sun-ring-1.png" class="sun rotate-slow-left" alt="sun ring">
+      <img id="sun-ring-2" src="images/sun/sun-ring-2.png" class="sun rotate-slow-right" alt="sun ring">
     </div>
 
     <div id="earth-wrapper">
       <div id="rocket-wrapper">
-        <img id="rocket-flame" src="images/rocket/rocket-flame.png" class="rocket-flame">
-        <img id="rocket-body" src="images/rocket/rocket.png" class="rocket-body">
+        <img id="rocket-flame" src="images/rocket/rocket-flame.png" class="rocket-flame" alt="rocket flame">
+        <img id="rocket-body" src="images/rocket/rocket.png" class="rocket-body" alt="rocket body">
       </div>
-      <img id="rocket-smoke" src="images/rocket/rocket-smoke.png" class="rocket-smoke">
-      <img id="earth" src="images/earth/earth-and-moon.png" class="earth">
+      <img id="rocket-smoke" src="images/rocket/rocket-smoke.png" class="rocket-smoke" alt="rocket smoke">
+      <img id="earth" src="images/earth/earth-and-moon.png" class="earth" alt="earth">
     </div>
   </section>
 
@@ -36,7 +37,7 @@
       <nav class="navbar">
         <div class="container">
           <div id="navbarMenuHeroA" class="navbar-menu">
-            <div class="navbar-end"https://www.w3schools.com/tags/att_font_color.asp>
+            <div class="navbar-end">
               <a class="navbar-item is-active">Mi ez?</a>
               <a class="navbar-item">Támogatom</a>
             </div>
@@ -48,12 +49,12 @@
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container has-text-centered">
-        <h1 class="title has-text-white">Napba lőnéd?</h1>
+        <h1 class="title has-text-white">Napba lőnél egy weboldalt?</h1>
         <h2 class="subtitle has-text-white">Legyen így.</h2>
       </div>
       <div id="button-launch-wrapper" class="container">
         <div class="content has-text-centered">
-          <a id="button-launch" class="button is-large is-rounded" onclick="launch(this)">Kilövés!</a>  
+          <a id="button-launch" class="button is-large is-rounded" onclick="launch(this)">Égjen!</a>
         </div>
       </div>
     </div>
@@ -65,28 +66,43 @@
         <div class="column is-8 is-offset-2">
           <div class="content">
             <h1 class="has-text-white">Remek, ez könnyű volt.</h1>
-            <p class="has-text-white">A rakétád a fénysebesség sokszorosával robog éppen a nap felé. A becsapódásig maradt még egy kis időd, nézz körül, ha van kedved.</p>
+            <p class="has-text-white">A weboldal az összes kitalálójával és megvalósítójával együtt a <strong><a class="light-speed tooltip is-tooltip-multiline" data-tooltip="Ez leginkább a kedvedért lehetséges, amúgy nem. A napsugarak átlagosan 8 perc alatt érik el a Földet. Ha most ennyit kellene várnod a rakéta becsapódásáig, valószínűleg minket is felgyújtanál.">fénysebesség sokszorosával</a></strong> robog éppen a nap felé. A becsapódásig maradt még egy kis időd, nézz körül, ha van kedved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div id="next-steps-titles" class="container">
+      <div class="content">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <div id="derp-bench-title" class="tile is-child box has-text-centered next-step-title" onclick="showById('derp-bench-content')">
+              <p class="title">Van még mondandóm</p>
+            </div>   
+          </div>
+          <div class="tile is-parent">
+            <div id="help-title" class="tile is-child box has-text-centered next-step-title" onclick="showById('help-content')">
+              <p class="title">Szeretnék segíteni</p>
+            </div>          
           </div>
         </div>
       </div>
     </div>
 
-    <br>
-    <br>
-
-    <div id="next-steps" class="container">
+    <div id="next-steps-content" class="container">
       <div class="content">
         <div class="tile is-ancestor">
           <div class="tile is-parent">
-            <div class="tile is-child box">
-              <p class="title">Még van mondandóm</p>
+            <div id="derp-bench-content" class="tile is-child box">
               <p>Nem múlt el a feszültség? Pont van nálunk egy <strong>derpegő lóca</strong> és egy szabad szöveges mező.</p>
-              <p>Íme, kérlek foglalj helyet...</p>
-              <img src="images/bench/derp-bench.png">
+              <p>Íme, kérlek foglalj helyet,</p>
+              <img alt="derp-bench" src="images/bench/derp-bench.png">
               <div class="field">
-                <label class="">És adj ki magadból mindent.</label>
+                <label class="">és adj ki magadból mindent.</label>
                 <div class="control">
-                  <textarea class="textarea" placeholder="Ide ni!" rows="10"></textarea>
+                  <textarea class="textarea" rows="10"></textarea>
                 </div>
               </div>
               <div class="field">
@@ -98,14 +114,14 @@
                
           </div>
           <div class="tile is-parent">
-            <div class="tile is-child box">
-              <p class="title">Szeretnék segíteni</p>
+            <div id="help-content" class="tile is-child box has-text-centered">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-            </div>          
+            </div>  
           </div>
         </div>
       </div>
     </div>
+
   </section>
   
 
@@ -126,7 +142,6 @@
   </footer>
 
   <script type="text/javascript" src="js/scripts.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
 </body>
 
 </html>

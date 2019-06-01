@@ -15,10 +15,10 @@ body {
 }
 
 #button-launch:hover {
-  animation: heartbeat .4s infinite;
+  animation: heartBeat .4s infinite;
 }
 
-@keyframes heartbeat {
+@keyframes heartBeat {
   50% { transform: scale(1.1); }
 }
 
@@ -40,4 +40,27 @@ body {
 
 .appear {
   animation: 2s linear forwards fadein;
+}
+
+.next-step-title:hover {
+  cursor: pointer;
+  animation: smallHeartBeat 4s infinite;
+}
+
+@keyframes smallHeartBeat {
+  50% { transform: scale(1.07); }
+}
+
+#next-steps-titles,
+#help-content,
+#derp-bench-content {
+  opacity: 0;
+}
+
+.show {
+  animation: 1s linear forwards fadein;
+}
+
+.light-speed:hover {
+    color: #3273dc;
 }

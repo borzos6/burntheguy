@@ -1,3 +1,6 @@
+/**
+ * @param element The button
+ */
 function launch(element) {
   // Launch rocket
   let rocketFlame = document.getElementById("rocket-flame");
@@ -20,5 +23,20 @@ function launch(element) {
   let successContainer = document.getElementById("success");
   setTimeout(() => {
     successContainer.classList.add('appear');
-  }, 1500);
+  }, 2500);
+
+  // Show next steps
+  let nextStepsTitles = document.getElementById("next-steps-titles");
+  setTimeout(() => {
+    nextStepsTitles.classList.add('appear');
+  }, 3500);
+}
+
+/**
+ *
+ * @param {string} id The selector id
+ */
+function showById(id) {
+  let element = document.getElementById(id);
+  element.classList.add('show');
 }
