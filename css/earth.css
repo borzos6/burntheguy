@@ -2,7 +2,7 @@
 .earth {
   position: absolute;
   right: 20px;
-  top: 110px;
+  top: 170px;
 }
 
 /* ROCKET */
@@ -12,7 +12,7 @@
   position: absolute;
   height: 40px;
   right: 148px;
-  top: 165px;
+  top: 225px;
   z-index: -2;
 }
 .rocket-body-flying {
@@ -29,7 +29,7 @@
   position: absolute;
   height: 20px;
   right: 125px;
-  top: 175px;
+  top: 235px;
   z-index: -2;
 }
 .rocket-flame-flying {
@@ -45,7 +45,6 @@
   50% { transform: scale(1.2); }
 }
 
-/* ROCKET */
 .rocket-smoke, 
 .rocket-smoke-flying
  {
@@ -53,7 +52,7 @@
   position: absolute;
   height: 80px;
   right: 134px;
-  top: 146px;
+  top: 206px;
   z-index: -3;
 }
 .rocket-smoke-flying {

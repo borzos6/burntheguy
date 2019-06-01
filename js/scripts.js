@@ -15,9 +15,9 @@ function launch(element) {
   rocketSmoke.classList.remove('rocket-smoke');
   rocketSmoke.classList.add('rocket-smoke-flying');
 
-  // Hide button
-  element.classList.remove('button-launch');
-  element.classList.add('disappear');
+  // Hide form
+  let launchForm = document.getElementById("launch-form");
+  launchForm.classList.add('disappear');
 
   // Show success
   let successContainer = document.getElementById("success");

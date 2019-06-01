@@ -41,23 +41,33 @@
 
   <!-- Site content -->
   <section class="hero is-narrow">
-    <!-- Hero head: will stick at the top -->
     <div class="hero-head">
-      <nav class="navbar">
-      </nav>
+      <nav class="navbar"></nav>
     </div>
 
-    <!-- Hero content: will be in the middle -->
     <div class="hero-body">
-      <div class="container has-text-centered">
-        <h1 class="title has-text-white">Napba lőnél egy weboldalt?</h1>
-        <h2 class="subtitle has-text-white">Legyen így.</h2>
-      </div>
-      <div id="button-launch-wrapper" class="container">
+      <div class="container">
         <div class="content has-text-centered">
-          <a id="button-launch" class="button is-large is-rounded" onclick="launch(this)">Égjen!</a>
+          <h1 class="title has-text-white">Napba lőnél egy weboldalt?</h1>
+          <h2 class="subtitle has-text-white">Legyen így. Mi a cím?</h2>
+
+          <div id="launch-form">
+            <div class="field">
+              <div class="control has-text-centered">
+                <input id="website-input" type="text" class="input website-input" value="https://" autofocus>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control has-text-centered">
+                <a id="launch-button" class="button is-large is-rounded" onclick="launch(this)">Égjen!</a>
+              </div>
+            </div>
+          </div>
         </div>
+
+
       </div>
+
     </div>
   </section>
 

@@ -10,12 +10,22 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-/* Launch button */
-#button-launch-wrapper {
-  padding-top: 1.5em;
+/* Hero content */
+#website-input {
+  background-color: transparent;
+  width: 50%;
+  border: none;
+  border-bottom: 3px solid white;
+  color: white;
+  box-shadow: none;
+  font-family: "Bree Serif", serif;
 }
 
-#button-launch:hover {
+#website-input:focus {
+  outline: none;
+}
+
+#launch-button:hover {
   animation: heartBeat .4s infinite;
 }
 
