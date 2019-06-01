@@ -7,6 +7,7 @@ body {
   background-position: top left;
   position: relative;
   z-index: -999;
+  font-family: "Raleway", sans-serif;
 }
 
 /* Launch button */
@@ -51,10 +52,13 @@ body {
   50% { transform: scale(1.07); }
 }
 
-#next-steps-titles,
+#next-steps-titles {
+  opacity: 1;
+  font-family: "Bree Serif", serif;
+}
 #help-content,
 #derp-bench-content {
-  opacity: 0;
+  opacity: 1;
 }
 
 .show {
@@ -63,4 +67,8 @@ body {
 
 .light-speed:hover {
     color: #3273dc;
+}
+
+#derp-bench-image {
+  width: 80%;
 }

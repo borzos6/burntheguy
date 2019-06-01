@@ -4,16 +4,24 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Napba lőném</title>
-  <meta name="description" content="Napba lőném">
-  <meta name="author" content="László Békéssy">
+  <title>Napba lőnék egy weboldalt</title>
+  <meta name="description" content="Napba lőnék egy weboldalt">
+  <meta name="author" content="László Békéssy & CodeBerry School">
 
   <link rel="stylesheet" href="css/bulma.min.css">
   <link rel="stylesheet" href="css/bulma-tooltip.min.css">
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway&display=swap" rel="stylesheet">
+
+  <meta property="og:url"           content="https://www.napbalonem.hu" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Napba lőnék egy weboldalt" />
+  <meta property="og:description"   content="Napba lőnék egy weboldalt" />
+  <meta property="og:image"         content="https://www.napbalonem.hu/images/og.png" />
 </head>
 
 <body>
+  <!-- Solar system -->
   <section>
     <div id="sun-wrapper">
       <img id="sun" src="images/sun/sun-no-ring.png" class="sun" alt="sun">  
@@ -31,18 +39,11 @@
     </div>
   </section>
 
+  <!-- Site content -->
   <section class="hero is-narrow">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar">
-        <div class="container">
-          <div id="navbarMenuHeroA" class="navbar-menu">
-            <div class="navbar-end">
-              <a class="navbar-item is-active">Mi ez?</a>
-              <a class="navbar-item">Támogatom</a>
-            </div>
-          </div>
-        </div>
       </nav>
     </div>
 
@@ -98,9 +99,12 @@
             <div id="derp-bench-content" class="tile is-child box">
               <p>Nem múlt el a feszültség? Pont van nálunk egy <strong>derpegő lóca</strong> és egy szabad szöveges mező.</p>
               <p>Íme, kérlek foglalj helyet,</p>
-              <img alt="derp-bench" src="images/bench/derp-bench.png">
+              <br>
+              <p class="has-text-centered">
+                <img id="derp-bench-image" alt="derp-bench" src="images/bench/derp-bench.png">
+              </p>
               <div class="field">
-                <label class="">és adj ki magadból mindent.</label>
+                <label class="">és nyugodtan adj ki magadból mindent.</label>
                 <div class="control">
                   <textarea class="textarea" rows="10"></textarea>
                 </div>
@@ -114,8 +118,28 @@
                
           </div>
           <div class="tile is-parent">
-            <div id="help-content" class="tile is-child box has-text-centered">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            <div id="help-content" class="tile is-child box">
+              <p>❤️Köszönjük, jól esik a támogatásod. Jelenleg így tudsz segíteni az internet világának és nekünk:</p>
+              <h2>Információ</h2>
+              <p>Küldd el nekünk, hogy melyik weboldalra haragszol.</p>
+              <div class="field has-addons">
+                <div class="control has-icons-right is-expanded">
+                  <input class="input" type="text" placeholder="https://nap-kompatibilis-weboldal.hu">
+                </div>
+                <p class="control">
+                  <a class="button is-link">Elküld</a>
+                </p>
+              </div>
+
+              <p> <strong>Hogy ez hogyan segít? </strong> <br>Van egy programozóiskolánk (<a href="https://codeberryschool.com/hu?utm_source=napbalonem.hu" target="_blank">CodeBerry Programozóiskola</a>),
+                ahol <em>diákok ezrei</em> várnak arra, hogy a való életből merített izgalmas projekteken gyakorolják a webfejlesztés alapjait.
+                Az így újratervezett oldalakat aztán visszaküldjük az eredeti tulajdonosoknak, abban bízva, hogy kicserélik
+                és ezzel kevesebb bosszúságot okoznak a világnak.
+                <br><br>
+                Egy botrányosan rossz weboldal így egy kiváló lehetőség a diákjaink számára. Szóval ha ilyet találtál, az aranyat ér.
+                Lehet, hogy pont az általad beküldött oldal lesz a következő amit megjavítunk <strong>teljesen ingyen</strong>. Jó, nem?</p>
+              <h2>Megosztás</h2>
+              <p>Ha tetszik az oldal, oszd meg. Minél több helyre jutunk el, annál több jóságot tudnak termelni a diákjaink. Szimplán másold be az url-t az üzenetedbe, a többit a robotok megoldják: <strong>https://napbalonem.hu</strong></p>
             </div>  
           </div>
         </div>
@@ -123,11 +147,8 @@
     </div>
 
   </section>
-  
 
-
-
-
+  <!-- Footer -->
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
@@ -136,11 +157,16 @@
         The website content
         is licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>. 
         <br>
-        We use no 🍪s, and we don't store your personal data. This is our policy.
+        <em style="font-size: .8em">
+          We use no cookies, and we don't store your personal data.
+          <br>
+          We use Google Analytics and Facebook to get insights from the site traffic. This is our policy.
+        </em>
       </p>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 
