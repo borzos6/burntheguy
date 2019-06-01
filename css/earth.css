@@ -2,7 +2,7 @@
 .earth {
   position: absolute;
   right: 20px;
-  top: 170px;
+  top: 165px;
 }
 
 /* ROCKET */
@@ -12,14 +12,14 @@
   position: absolute;
   height: 40px;
   right: 148px;
-  top: 225px;
+  top: 220px;
   z-index: -2;
 }
 .rocket-body-flying {
-  animation: rocketfly 480s linear;
+  animation: rocketFly 480s linear;
 }
 
-@keyframes rocketfly {
+@keyframes rocketFly {
   from { right: 148px; }
   to { right: 4000px; }
 }
@@ -29,19 +29,19 @@
   position: absolute;
   height: 20px;
   right: 125px;
-  top: 235px;
+  top: 230px;
   z-index: -2;
 }
 .rocket-flame-flying {
-  animation: fuelburning 1s infinite, flamefly 480s linear;
+  animation: fuelBurning 1s infinite, flameFly 480s linear;
 }
 
-@keyframes flamefly {
+@keyframes flameFly {
   from { right: 125px; }
   to { right: 4000px; }
 }
 
-@keyframes fuelburning {
+@keyframes fuelBurning {
   50% { transform: scale(1.2); }
 }
 
@@ -52,14 +52,14 @@
   position: absolute;
   height: 80px;
   right: 134px;
-  top: 206px;
+  top: 200px;
   z-index: -3;
 }
 .rocket-smoke-flying {
-  animation: launchsmoke 10s normal forwards;
+  animation: launchSmoke 10s normal forwards;
 }
 
-@keyframes launchsmoke {
+@keyframes launchSmoke {
   0% { opacity: 0; }
   20%{ opacity: 1; }
   100% { opacity: 0; }

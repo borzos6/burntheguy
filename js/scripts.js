@@ -26,9 +26,9 @@ function launch(element) {
   }, 2500);
 
   // Show next steps
-  let nextStepsTitles = document.getElementById("next-steps-titles");
+  let nextStepsContent = document.getElementById("next-steps-content");
   setTimeout(() => {
-    nextStepsTitles.classList.add('appear');
+    nextStepsContent.classList.add('appear');
   }, 3500);
 }
 

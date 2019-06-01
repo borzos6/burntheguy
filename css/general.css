@@ -1,5 +1,4 @@
 /* GENERAL */
-/* Background */
 body {
   background-image: url("../images/background/background.png");
   background-color: #321240;
@@ -8,6 +7,10 @@ body {
   position: relative;
   z-index: -999;
   font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bree Serif", serif;
 }
 
 /* Hero content */
@@ -39,46 +42,35 @@ body {
   transition: visibility 0s .5s, opacity .5s linear;
 }
 
-#success {
+/* Details block */
+.details {
   opacity: 0;
-  padding-top: 2em;
 }
 
-@keyframes fadein {
-    0% { opacity:0; }
-    100% { opacity:1; }
-}
-
-.appear {
-  animation: 2s linear forwards fadein;
-}
-
-.next-step-title:hover {
-  cursor: pointer;
-  animation: smallHeartBeat 4s infinite;
-}
-
-@keyframes smallHeartBeat {
-  50% { transform: scale(1.07); }
-}
-
-#next-steps-titles {
-  opacity: 1;
-  font-family: "Bree Serif", serif;
-}
-#help-content,
-#derp-bench-content {
-  opacity: 1;
-}
-
-.show {
-  animation: 1s linear forwards fadein;
+/* Success block */
+#success,
+#next-steps-content {
+  padding-top: 1em;
 }
 
 .light-speed:hover {
-    color: #3273dc;
+  color: #3273dc;
 }
 
+@keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+
+.appear {
+  animation: 2s linear forwards fadeIn;
+}
+
+/* Details block */
 #derp-bench-image {
-  width: 80%;
+  width: 70%;
+}
+
+.input-opaque {
+  opacity: .8;
 }

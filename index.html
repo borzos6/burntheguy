@@ -6,7 +6,7 @@
 
   <title>Napba lőnék egy weboldalt</title>
   <meta name="description" content="Napba lőnék egy weboldalt">
-  <meta name="author" content="László Békéssy & CodeBerry School">
+  <meta name="author" content="László Békéssy">
 
   <link rel="stylesheet" href="css/bulma.min.css">
   <link rel="stylesheet" href="css/bulma-tooltip.min.css">
@@ -40,6 +40,7 @@
   </section>
 
   <!-- Site content -->
+  <!-- Hero -->
   <section class="hero is-narrow">
     <div class="hero-head">
       <nav class="navbar"></nav>
@@ -64,49 +65,29 @@
             </div>
           </div>
         </div>
-
-
       </div>
-
     </div>
   </section>
 
+  <!-- Details -->
   <section class="section">
-    <div id="success" class="container">
+    <div id="success" class="container details">
       <div class="columns">
         <div class="column is-8 is-offset-2">
           <div class="content">
             <h1 class="has-text-white">Remek, ez könnyű volt.</h1>
-            <p class="has-text-white">A weboldal az összes kitalálójával és megvalósítójával együtt a <strong><a class="light-speed tooltip is-tooltip-multiline" data-tooltip="Ez leginkább a kedvedért lehetséges, amúgy nem. A napsugarak átlagosan 8 perc alatt érik el a Földet. Ha most ennyit kellene várnod a rakéta becsapódásáig, valószínűleg minket is felgyújtanál.">fénysebesség sokszorosával</a></strong> robog éppen a nap felé. A becsapódásig maradt még egy kis időd, nézz körül, ha van kedved.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div id="next-steps-titles" class="container">
-      <div class="content">
-        <div class="tile is-ancestor">
-          <div class="tile is-parent">
-            <div id="derp-bench-title" class="tile is-child box has-text-centered next-step-title" onclick="showById('derp-bench-content')">
-              <p class="title">Van még mondandóm</p>
-            </div>   
-          </div>
-          <div class="tile is-parent">
-            <div id="help-title" class="tile is-child box has-text-centered next-step-title" onclick="showById('help-content')">
-              <p class="title">Szeretnék segíteni</p>
-            </div>          
+            <p class="has-text-white">A weboldal az összes kitalálójával, megvalósítójával és üzemeltetőjével együtt a <strong><a class="light-speed tooltip is-tooltip-multiline" data-tooltip="Ez leginkább a kedvedért lehetséges, a való életben nem. A napsugarak átlagosan 8 perc alatt érik el a Földet, ez visszafelé sem lehet kevesebb. Ha most ennyit kellene várnod a rakéta becsapódásáig, valószínűleg minket is napba lőnél.">fénysebesség sokszorosával</a></strong> robog éppen a nap felé. A becsapódásig maradt még egy kis időd, nézz körül, ha van kedved.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="next-steps-content" class="container">
+    <div id="next-steps-content" class="container details">
       <div class="content">
         <div class="tile is-ancestor">
           <div class="tile is-parent">
             <div id="derp-bench-content" class="tile is-child box">
+              <h2 class="title">Maradt még benned?</h2>
               <p>Nem múlt el a feszültség? Pont van nálunk egy <strong>derpegő lóca</strong> és egy szabad szöveges mező.</p>
               <p>Íme, kérlek foglalj helyet,</p>
               <br>
@@ -116,12 +97,13 @@
               <div class="field">
                 <label class="">és nyugodtan adj ki magadból mindent.</label>
                 <div class="control">
-                  <textarea class="textarea" rows="10"></textarea>
+                  <textarea class="textarea input-opaque" rows="9"></textarea>
                 </div>
               </div>
+              <p>A jó hír, hogy ezt nem fogjuk elküldeni <em>senkinek</em>. Csak úgy itt hagyhatod. Tényleg.</p>
               <div class="field">
                 <div class="control">
-                  <a class="button is-fullwidth is-link">Ezt is beleküldöm a napba!</a>
+                  <a class="button is-link is-fullwidth">Na!</a>
                 </div>
               </div>
             </div>
@@ -129,27 +111,24 @@
           </div>
           <div class="tile is-parent">
             <div id="help-content" class="tile is-child box">
-              <p>❤️Köszönjük, jól esik a támogatásod. Jelenleg így tudsz segíteni az internet világának és nekünk:</p>
-              <h2>Információ</h2>
-              <p>Küldd el nekünk, hogy melyik weboldalra haragszol.</p>
-              <div class="field has-addons">
-                <div class="control has-icons-right is-expanded">
-                  <input class="input" type="text" placeholder="https://nap-kompatibilis-weboldal.hu">
-                </div>
-                <p class="control">
-                  <a class="button is-link">Elküld</a>
-                </p>
-              </div>
-
-              <p> <strong>Hogy ez hogyan segít? </strong> <br>Van egy programozóiskolánk (<a href="https://codeberryschool.com/hu?utm_source=napbalonem.hu" target="_blank">CodeBerry Programozóiskola</a>),
-                ahol <em>diákok ezrei</em> várnak arra, hogy a való életből merített izgalmas projekteken gyakorolják a webfejlesztés alapjait.
-                Az így újratervezett oldalakat aztán visszaküldjük az eredeti tulajdonosoknak, abban bízva, hogy kicserélik
-                és ezzel kevesebb bosszúságot okoznak a világnak.
+              <h2 class="title">Tudtad, hogy segítettél?</h2>
+              <p>
+                <strong>Bizony ám. </strong>
                 <br><br>
-                Egy botrányosan rossz weboldal így egy kiváló lehetőség a diákjaink számára. Szóval ha ilyet találtál, az aranyat ér.
-                Lehet, hogy pont az általad beküldött oldal lesz a következő amit megjavítunk <strong>teljesen ingyen</strong>. Jó, nem?</p>
-              <h2>Megosztás</h2>
-              <p>Ha tetszik az oldal, oszd meg. Minél több helyre jutunk el, annál több jóságot tudnak termelni a diákjaink. Szimplán másold be az url-t az üzenetedbe, a többit a robotok megoldják: <strong>https://napbalonem.hu</strong></p>
+                A <strong><a href="https://codeberryschool.com/hu?utm_source=napbalonem.hu" target="_blank">CodeBerry School</a></strong> programozóiskolában
+                <em>diákok ezrei</em> várnak arra, hogy a való életből merített izgalmas projekteken gyakorolják a webfejlesztés alapjait.
+                Az így újratervezett oldalakat aztán <strong>visszaküldjük az eredeti tulajdonosoknak</strong>, abban bízva, hogy lecserélik a régit
+                és ezzel kevesebb bosszúságot okoznak a világnak. <strong>Mindezt teljesen ingyen.</strong>
+                <br><br>
+                Egy botrányosan rossz weboldal így egy kiváló lehetőség a diákjaink számára. Szóval ha ilyet találtál, az aranyat ér, sőt, könnyen
+                lehet, hogy pont az általad beküldött oldal lesz a következő amit megjavítunk. Jó, nem? De. Naugye.</p>
+              <h2>Szeretnél még segíteni?</h2>
+              <p>Ha tetszik az oldal vagy a kezdeményezés, segít, ha megosztod. Minél több helyre jutunk el, annál több értéket tudnak teremteni a diákjaink és annál több értéket kapnak ők is. Win-win.
+                <br><br>
+                Szimplán másold be az url-t az üzenetedbe, a többit a robotok megoldják: <strong>https://napbalonem.hu</strong>. Köszi ❤️
+                <br><br>
+                Ha csak egy <a href="https://giphy.com/search/kittens" target="_blank">cicás GIF</a> választ el a megosztástól, ezen ne múljon.
+              </p>
             </div>  
           </div>
         </div>
@@ -162,7 +141,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Burn The Guy</strong> made with 🔥by <a href="https://laszlobekessy.me">László Békéssy</a>. 
+        <strong>Burn The Web</strong> made with 🔥by <a href="https://laszlobekessy.me">László Békéssy</a>.
         <br>
         The website content
         is licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>. 
@@ -170,7 +149,7 @@
         <em style="font-size: .8em">
           We use no cookies, and we don't store your personal data.
           <br>
-          We use Google Analytics and Facebook to get insights from the site traffic. This is our policy.
+          Traffic based data will be shared with Google and Facebook. This is our policy.
         </em>
       </p>
     </div>
