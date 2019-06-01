@@ -10,26 +10,11 @@ body {
 }
 
 /* Launch button */
-.launch {
-  top: 90px;
-  text-align: center;
+#button-launch-wrapper {
+  padding-top: 1.5em;
 }
 
-button {
-  background: transparent;
-  color: #fff;
-  border: 3px solid #fff;
-  border-radius: 50px;
-  padding: 0.8rem 2rem;
-  font: 24px "Margarine", sans-serif;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-  transition: 0.2s ease-in-out;
-  letter-spacing: 2px;
-}
-
-.button-launch:hover {
+#button-launch:hover {
   animation: heartbeat .4s infinite;
 }
 

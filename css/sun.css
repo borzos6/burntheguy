@@ -1,7 +1,7 @@
 /* SUN */
 .sun {
   position: absolute;
-  left: -600px;
+  left: -650px;
   top: -200px;
   z-index: -1;
   max-width: none;

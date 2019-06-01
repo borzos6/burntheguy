@@ -24,7 +24,7 @@
       <img id="rocket-flame" src="images/rocket/rocket-flame.png" class="rocket-flame">
       <img id="rocket-body" src="images/rocket/rocket.png" class="rocket-body">
     </div>
-    <!-- <img src="images/rocket/rocket-smoke.png" class="rocket-smoke"> -->
+    <img id="rocket-smoke" src="images/rocket/rocket-smoke.png" class="rocket-smoke">
     <img id="earth" src="images/earth/earth-and-moon.png" class="earth">
   </div>
 
@@ -46,17 +46,18 @@
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container has-text-centered">
-        <h1 class="title">
-          Napba lőnéd?
-        </h1>
-        <h2 class="subtitle">
-          Legyen így.
-        </h2>
+        <h1 class="title has-text-white">Napba lőnéd?</h1>
+        <h2 class="subtitle has-text-white">Legyen így.</h2>
+      </div>
+      <div id="button-launch-wrapper" class="container">
+        <div class="content has-text-centered">
+          <a id="button-launch" class="button is-large is-rounded" onclick="launch(this)">Kilövés!</a>  
+        </div>
       </div>
     </div>
   </section>
 
-
+<hr>
     <div class="columns">
       <div class="column is-narrow">
         <div class="box" style="width: 200px;">
@@ -77,15 +78,9 @@
 
 
 
-    <div class="sun">
-      <img src="images/sun/sun-no-ring.png" class="sun">  
-      <img src="images/sun/sun-ring-1.png" class="sun rotate-slow-left">
-      <img src="images/sun/sun-ring-2.png" class="sun rotate-slow-right">
-    </div>
+    
 
-    <div class="launch">
-      <button id="button-launch" class="button button-launch" onclick="launch(this)">Launch!</button>
-    </div>    
+    
 
   <script type="text/javascript" src="js/scripts.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  

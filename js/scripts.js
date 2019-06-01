@@ -7,6 +7,10 @@ function launch(element) {
   rocketBody.classList.remove('rocket-body');
   rocketBody.classList.add('rocket-body-flying');
 
+  let rocketSmoke = document.getElementById("rocket-smoke");
+  rocketSmoke.classList.remove('rocket-smoke');
+  rocketSmoke.classList.add('rocket-smoke-flying');
+
   element.classList.remove('button-launch');
   element.classList.add('disappear');
 }
