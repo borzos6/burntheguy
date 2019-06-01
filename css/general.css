@@ -4,7 +4,7 @@ body {
   background-image: url("../images/background/background.png");
   background-color: #321240;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-position: top left;
   position: relative;
   z-index: -999;
 }
@@ -26,4 +26,18 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s .5s, opacity .5s linear;
+}
+
+#success {
+  opacity: 0;
+  padding-top: 2em;
+}
+
+@keyframes fadein {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.appear {
+  animation: 2s linear forwards fadein;
 }

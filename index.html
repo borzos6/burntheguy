@@ -13,20 +13,22 @@
 </head>
 
 <body>
-  <div id="sun-wrapper">
-    <img id="sun" src="images/sun/sun-no-ring.png" class="sun">  
-    <img id="sun-ring-1" src="images/sun/sun-ring-1.png" class="sun rotate-slow-left">
-    <img id="sun-ring-2" src="images/sun/sun-ring-2.png" class="sun rotate-slow-right">  
-  </div>
-
-  <div id="earth-wrapper">
-    <div id="rocket-wrapper">
-      <img id="rocket-flame" src="images/rocket/rocket-flame.png" class="rocket-flame">
-      <img id="rocket-body" src="images/rocket/rocket.png" class="rocket-body">
+  <section>
+    <div id="sun-wrapper">
+      <img id="sun" src="images/sun/sun-no-ring.png" class="sun">  
+      <img id="sun-ring-1" src="images/sun/sun-ring-1.png" class="sun rotate-slow-left">
+      <img id="sun-ring-2" src="images/sun/sun-ring-2.png" class="sun rotate-slow-right">  
     </div>
-    <img id="rocket-smoke" src="images/rocket/rocket-smoke.png" class="rocket-smoke">
-    <img id="earth" src="images/earth/earth-and-moon.png" class="earth">
-  </div>
+
+    <div id="earth-wrapper">
+      <div id="rocket-wrapper">
+        <img id="rocket-flame" src="images/rocket/rocket-flame.png" class="rocket-flame">
+        <img id="rocket-body" src="images/rocket/rocket.png" class="rocket-body">
+      </div>
+      <img id="rocket-smoke" src="images/rocket/rocket-smoke.png" class="rocket-smoke">
+      <img id="earth" src="images/earth/earth-and-moon.png" class="earth">
+    </div>
+  </section>
 
   <section class="hero is-narrow">
     <!-- Hero head: will stick at the top -->
@@ -57,30 +59,71 @@
     </div>
   </section>
 
-<hr>
-    <div class="columns">
-      <div class="column is-narrow">
-        <div class="box" style="width: 200px;">
-          <p class="title is-5">Narrow column</p>
-          <p class="subtitle">This column is only 200px wide.</p>
+  <section class="section">
+    <div id="success" class="container">
+      <div class="columns">
+        <div class="column is-8 is-offset-2">
+          <div class="content">
+            <h1 class="has-text-white">Remek, ez könnyű volt.</h1>
+            <p class="has-text-white">A rakétád a fénysebesség sokszorosával robog éppen a nap felé. A becsapódásig maradt még egy kis időd, nézz körül, ha van kedved.</p>
+          </div>
         </div>
       </div>
-      <div class="column">
-        <div class="box">
-          <p class="title is-5">Flexible column</p>
-          <p class="subtitle">This column will take up the remaining space available.</p>
-        </div>
     </div>
-  </div>
+
+    <br>
+    <br>
+
+    <div id="next-steps" class="container">
+      <div class="content">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <div class="tile is-child box">
+              <p class="title">Még van mondandóm</p>
+              <p>Nem múlt el a feszültség? Pont van nálunk egy <strong>derpegő lóca</strong> és egy szabad szöveges mező.</p>
+              <p>Íme, kérlek foglalj helyet...</p>
+              <img src="images/bench/derp-bench.png">
+              <div class="field">
+                <label class="">És adj ki magadból mindent.</label>
+                <div class="control">
+                  <textarea class="textarea" placeholder="Ide ni!" rows="10"></textarea>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <a class="button is-fullwidth is-link">Ezt is beleküldöm a napba!</a>
+                </div>
+              </div>
+            </div>
+               
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child box">
+              <p class="title">Szeretnék segíteni</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </div>          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
 
 
 
-
-
-    
-
-    
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Burn The Guy</strong> made with 🔥by <a href="https://laszlobekessy.me">László Békéssy</a>. 
+        <br>
+        The website content
+        is licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>. 
+        <br>
+        We use no 🍪s, and we don't store your personal data. This is our policy.
+      </p>
+    </div>
+  </footer>
 
   <script type="text/javascript" src="js/scripts.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  

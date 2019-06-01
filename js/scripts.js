@@ -1,4 +1,5 @@
 function launch(element) {
+  // Launch rocket
   let rocketFlame = document.getElementById("rocket-flame");
   rocketFlame.classList.remove('rocket-flame');
   rocketFlame.classList.add('rocket-flame-flying');
@@ -11,6 +12,13 @@ function launch(element) {
   rocketSmoke.classList.remove('rocket-smoke');
   rocketSmoke.classList.add('rocket-smoke-flying');
 
+  // Hide button
   element.classList.remove('button-launch');
   element.classList.add('disappear');
+
+  // Show success
+  let successContainer = document.getElementById("success");
+  setTimeout(() => {
+    successContainer.classList.add('appear');
+  }, 1500);
 }
