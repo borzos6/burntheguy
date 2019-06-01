@@ -1,0 +1,49 @@
+/* EARTH */
+.earth {
+  position: absolute;
+  right: 20px;
+  top: 60px;
+}
+
+
+/* ROCKET */
+.rocket-body, 
+.rocket-body-flying
+ {
+  position: absolute;
+  height: 40px;
+  right: 148px;
+  top: 115px;
+}
+.rocket-body-flying {
+  animation: rocketfly 480s linear;
+}
+
+@keyframes rocketfly {
+  from { right: 148px; }
+  to { right: 4000px; }
+}
+
+@keyframes fuelburning {
+  50% { transform: scale(1.2); }
+}
+
+.rocket-flame,
+.rocket-flame-flying  {
+  position: absolute;
+  height: 20px;
+  right: 125px;
+  top: 125px;
+}
+.rocket-flame-flying {
+  animation: fuelburning 1s infinite, flamefly 480s linear;
+}
+
+@keyframes flamefly {
+  from { right: 125px; }
+  to { right: 4000px; }
+}
+
+@keyframes fuelburning {
+  50% { transform: scale(1.2); }
+}

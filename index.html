@@ -4,39 +4,91 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Burn the guy</title>
-  <meta name="description" content="Burn the guy">
-  <meta name="author" content="BL">
+  <title>Napba lőném</title>
+  <meta name="description" content="Napba lőném">
+  <meta name="author" content="László Békéssy">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
   <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
 </head>
 
 <body>
-  <div class="earth">
-    <!-- <img src="images/fireball/fireball2.png" class="fireball" id="fireball"> -->
-    <div class="rocket">
-      <img src="images/rocket/rocket-flame.png" class="rocket-flame" id="rocket-flame">
-      <img src="images/rocket/rocket.png" class="rocket-body" id="rocket-body">
+  <div id="sun-wrapper">
+    <img id="sun" src="images/sun/sun-no-ring.png" class="sun">  
+    <img id="sun-ring-1" src="images/sun/sun-ring-1.png" class="sun rotate-slow-left">
+    <img id="sun-ring-2" src="images/sun/sun-ring-2.png" class="sun rotate-slow-right">  
+  </div>
+
+  <div id="earth-wrapper">
+    <div id="rocket-wrapper">
+      <img id="rocket-flame" src="images/rocket/rocket-flame.png" class="rocket-flame">
+      <img id="rocket-body" src="images/rocket/rocket.png" class="rocket-body">
     </div>
     <!-- <img src="images/rocket/rocket-smoke.png" class="rocket-smoke"> -->
-    <img src="images/earth/earth-and-moon.png" class="earth">
+    <img id="earth" src="images/earth/earth-and-moon.png" class="earth">
   </div>
 
-  <div class="sun">
-    <img src="images/sun/sun-no-ring.png" class="sun">  
-    <img src="images/sun/sun-ring-1.png" class="sun rotate-slow-left">
-    <img src="images/sun/sun-ring-2.png" class="sun rotate-slow-right">
-  </div>
+  <section class="hero is-narrow">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end"https://www.w3schools.com/tags/att_font_color.asp>
+              <a class="navbar-item is-active">Mi ez?</a>
+              <a class="navbar-item">Támogatom</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
 
-  <div class="launch">
-    <div class="button button-launch">
-      <button id="button-launch" onclick="launch(this)">Launch!</button>
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">
+          Napba lőnéd?
+        </h1>
+        <h2 class="subtitle">
+          Legyen így.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+    <div class="columns">
+      <div class="column is-narrow">
+        <div class="box" style="width: 200px;">
+          <p class="title is-5">Narrow column</p>
+          <p class="subtitle">This column is only 200px wide.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="box">
+          <p class="title is-5">Flexible column</p>
+          <p class="subtitle">This column will take up the remaining space available.</p>
+        </div>
     </div>
   </div>
 
+
+
+
+
+
+    <div class="sun">
+      <img src="images/sun/sun-no-ring.png" class="sun">  
+      <img src="images/sun/sun-ring-1.png" class="sun rotate-slow-left">
+      <img src="images/sun/sun-ring-2.png" class="sun rotate-slow-right">
+    </div>
+
+    <div class="launch">
+      <button id="button-launch" class="button button-launch" onclick="launch(this)">Launch!</button>
+    </div>    
+
   <script type="text/javascript" src="js/scripts.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
 </body>
 
 </html>

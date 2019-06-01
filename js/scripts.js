@@ -7,15 +7,6 @@ function launch(element) {
   rocketBody.classList.remove('rocket-body');
   rocketBody.classList.add('rocket-body-flying');
 
-  setInterval(function () {
-    if (!element.style.opacity) {
-      element.style.opacity = 1;
-    }
-    if (element.style.opacity > 0) {
-      element.style.opacity -= 0.1;
-    } else {
-      clearInterval(fadeEffect);
-    }
-  }, 50);
-
+  element.classList.remove('button-launch');
+  element.classList.add('disappear');
 }

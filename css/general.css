@@ -1,0 +1,44 @@
+/* GENERAL */
+/* Background */
+body {
+  background-image: url("../images/background/background.png");
+  background-color: #321240;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  position: relative;
+  z-index: -999;
+}
+
+/* Launch button */
+.launch {
+  top: 90px;
+  text-align: center;
+}
+
+button {
+  background: transparent;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font: 24px "Margarine", sans-serif;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  letter-spacing: 2px;
+}
+
+.button-launch:hover {
+  animation: heartbeat .4s infinite;
+}
+
+@keyframes heartbeat {
+  50% { transform: scale(1.1); }
+}
+
+.disappear {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .5s, opacity .5s linear;
+}

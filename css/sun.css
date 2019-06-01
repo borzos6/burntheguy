@@ -1,0 +1,26 @@
+/* SUN */
+.sun {
+  position: absolute;
+  left: -600px;
+  top: -200px;
+  z-index: -1;
+  max-width: none;
+}
+
+.rotate-slow-left {
+  animation: spinleft 30s infinite linear;
+}
+
+.rotate-slow-right {
+  animation: spinright 35s infinite linear;
+}
+
+@keyframes spinleft {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-359deg); }
+}
+
+@keyframes spinright {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}
