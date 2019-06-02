@@ -1,42 +1,113 @@
+const ACTION_LAUNCH = 'launch';
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxTu73yAGRDFG-_2vPVavkONL2zeLjR77btVb5id0kknIjfowA/exec';
+
 /**
- * @param element The button
+ * @param {String} action The action
  */
-function launch(element) {
-  // Launch rocket
-  let rocketFlame = document.getElementById("rocket-flame");
+function handleAction(action) {
+  /* Data validation */
+  const websiteInput = document.getElementById("website");
+  if (!websiteInput.value) {
+    /* Shake the input */
+    websiteInput.classList.add('shake');
+    setTimeout(function () {
+      websiteInput.classList.remove('shake');
+    }, 800);
+
+  } else {
+    /* Launch rocket */
+    if (action === ACTION_LAUNCH) {
+      launchRocket();
+    }
+
+    /* Handle input form */
+    handleInputForm();
+
+    /* Show success */
+    showSuccess(action);
+
+    /* Show next steps */
+    showNextSteps(action);
+  }
+}
+
+/**
+ * Handles the rocket launch
+ */
+const launchRocket = function () {
+  const rocketFlame = document.getElementById("rocket-flame");
   rocketFlame.classList.remove('rocket-flame');
   rocketFlame.classList.add('rocket-flame-flying');
 
-  let rocketBody = document.getElementById("rocket-body");
+  const rocketBody = document.getElementById("rocket-body");
   rocketBody.classList.remove('rocket-body');
   rocketBody.classList.add('rocket-body-flying');
 
-  let rocketSmoke = document.getElementById("rocket-smoke");
+  const rocketSmoke = document.getElementById("rocket-smoke");
   rocketSmoke.classList.remove('rocket-smoke');
   rocketSmoke.classList.add('rocket-smoke-flying');
-
-  // Hide form
-  let launchForm = document.getElementById("launch-form");
-  launchForm.classList.add('disappear');
-
-  // Show success
-  let successContainer = document.getElementById("success");
-  setTimeout(() => {
-    successContainer.classList.add('appear');
-  }, 2500);
-
-  // Show next steps
-  let nextStepsContent = document.getElementById("next-steps-content");
-  setTimeout(() => {
-    nextStepsContent.classList.add('appear');
-  }, 3500);
-}
+};
 
 /**
- *
- * @param {string} id The selector id
+ * Handles the input form
  */
-function showById(id) {
-  let element = document.getElementById(id);
-  element.classList.add('show');
-}
+const handleInputForm = function () {
+  /* Hide form */
+  const inputForm = document.getElementById("input-form");
+  inputForm.classList.add('disappear');
+
+  /* Send data */
+  fetch(SHEETS_URL, { method: 'POST', body: new FormData(inputForm) })
+    .then(() => console.log('Website saved'))
+    .catch(error => console.error('Error!', error.message))
+};
+
+/**
+ * Shows the success block
+ * @param {String} action The action
+ */
+const showSuccess = function (action) {
+  let timeoutInMilliSeconds = 100;
+
+  /* Hide the unnecessary container */
+  if (action === ACTION_LAUNCH) {
+    const successFix = document.getElementById("success-fix");
+    successFix.classList.add('is-hidden');
+    /* Add timeout */
+    timeoutInMilliSeconds = 2500;
+  } else {
+    const successLaunch = document.getElementById("success-launch");
+    successLaunch.classList.add('is-hidden');
+  }
+
+  /* Fade in the whole block */
+  const successContainer = document.getElementById("success");
+  setTimeout(() => {
+    successContainer.classList.add('appear');
+  }, timeoutInMilliSeconds);
+};
+
+/**
+ * Shows the next steps block
+ * @param {String} action The action
+ */
+const showNextSteps = function (action) {
+  let timeoutInMilliSeconds = 1000;
+
+  /* Hide the unnecessary container */
+  if (action === ACTION_LAUNCH) {
+    const detailsFix = document.getElementById("details-fix");
+    detailsFix.classList.add('is-hidden');
+    /* Add timeout */
+    timeoutInMilliSeconds = 3500;
+  } else {
+    const detailsLaunch = document.getElementById("details-launch");
+    detailsLaunch.classList.add('is-hidden');
+  }
+
+  /* Fade in the whole block */
+  const nextStepsContent = document.getElementById("next-steps-content");
+  setTimeout(() => {
+    nextStepsContent.classList.add('appear');
+  }, timeoutInMilliSeconds);
+};

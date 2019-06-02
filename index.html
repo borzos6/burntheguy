@@ -1,11 +1,11 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="hu">
 <head>
   <meta charset="utf-8">
 
-  <title>Napba lőnék egy weboldalt</title>
-  <meta name="description" content="Napba lőnék egy weboldalt">
+  <title>Rossz weboldal? Javítsuk meg, vagy lőjük a napba?</title>
+  <meta name="description" content="Napba lőném.">
   <meta name="author" content="László Békéssy">
 
   <link rel="stylesheet" href="css/bulma.min.css">
@@ -13,10 +13,10 @@
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway&display=swap" rel="stylesheet">
 
-  <meta property="og:url"           content="https://www.napbalonem.hu" />
+  <meta property="og:url"           content="https://www.webrendorseg.hu" />
   <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Napba lőnék egy weboldalt" />
-  <meta property="og:description"   content="Napba lőnék egy weboldalt" />
+  <meta property="og:title"         content="Napba lőném." />
+  <meta property="og:description"   content="Rossz weboldal? Javítsuk meg, vagy lőjük a napba?" />
   <meta property="og:image"         content="https://www.napbalonem.hu/images/og.png" />
 </head>
 
@@ -49,107 +49,161 @@
     <div class="hero-body">
       <div class="container">
         <div class="content has-text-centered">
-          <h1 class="title has-text-white">Napba lőnél egy weboldalt?</h1>
-          <h2 class="subtitle has-text-white">Legyen így. Mi a cím?</h2>
+          <h1 class="title has-text-white">Rossz weboldal?</h1>
+          <h3 class="subtitle has-text-white">Juhé! Mi a cím és mi legyen vele?</h3>
 
-          <div id="launch-form">
+          <form id="input-form" name="input-form">
             <div class="field">
               <div class="control has-text-centered">
-                <input id="website-input" type="text" class="input website-input" value="https://" autofocus>
+                <input id="website" name="website" type="text" class="input" placeholder="https://" autofocus>
               </div>
             </div>
-            <div class="field">
-              <div class="control has-text-centered">
-                <a id="launch-button" class="button is-large is-rounded" onclick="launch(this)">Égjen!</a>
+            <div class="columns">
+              <div class="column is-3-tablet is-offset-3-tablet is-12-mobile">
+                <div class="field">
+                  <div class="control has-text-centered">
+                    <a id="fix-button" class="button is-large is-rounded" onclick="handleAction('fix')">Javítsuk meg!</a>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3-tablet is-12-mobile">
+                <div class="field">
+                  <div class="control has-text-centered">
+                    <a id="launch-button" class="button is-large is-rounded" onclick="handleAction('launch')">Lőjük a napba!</a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </form>
+
         </div>
       </div>
     </div>
   </section>
 
   <!-- Details -->
-  <section class="section">
+  <section id="details-section" class="section">
     <div id="success" class="container details">
       <div class="columns">
-        <div class="column is-8 is-offset-2">
+        <div id="success-launch" class="column is-8 is-offset-2">
           <div class="content">
             <h1 class="has-text-white">Remek, ez könnyű volt.</h1>
-            <p class="has-text-white">A weboldal az összes kitalálójával, megvalósítójával és üzemeltetőjével együtt a <strong><a class="light-speed tooltip is-tooltip-multiline" data-tooltip="Ez leginkább a kedvedért lehetséges, a való életben nem. A napsugarak átlagosan 8 perc alatt érik el a Földet, ez visszafelé sem lehet kevesebb. Ha most ennyit kellene várnod a rakéta becsapódásáig, valószínűleg minket is napba lőnél.">fénysebesség sokszorosával</a></strong> robog éppen a nap felé. A becsapódásig maradt még egy kis időd, nézz körül, ha van kedved.</p>
+            <p class="has-text-white">
+              A weboldal az összes kitalálójával, megvalósítójával, üzemeltetőjével és infrastruktúrájával együtt a
+              <strong>
+                <a class="light-speed tooltip is-tooltip-multiline"
+                   data-tooltip="Ez amúgy a való életben nem lehetséges, még akkor sem, ha Elon Musk a saját kezével
+                   építette azt a rakétát. Azért oldottuk meg mégis a kedvedért, mert a napsugarak átlagosan 8
+                   perc alatt érik el a Földet (ez visszafelé is ennyi lenne). Ha most ennyit kellene várnod a
+                   rakéta becsapódásáig, valószínűleg minket is napba lőnél.">
+                  fénysebesség sokszorosával
+                </a>
+              </strong> robog éppen a nap felé. Huh. A becsapódásig maradt még egy kis időd, nézz körül, ha van kedved.
+            </p>
+          </div>
+        </div>
+
+        <div id="success-fix" class="column is-8 is-offset-2">
+          <div class="content">
+            <h1 class="has-text-white">Remek, pont jó helyen jársz.</h1>
+            <p class="has-text-white">
+              Az oldal készítésével
+              <strong>
+                <a class="light-speed tooltip is-tooltip-multiline"
+                   data-tooltip="A történelmi hűség és a transzparencia jegyében maradjunk annyiban, hogy ez LETT a célunk.
+                   Amikor megcsináltuk az oldalt, akkor szimplán a napba akartunk lőni néhány weboldalt, mert annyra
+                   felbosszantottak.">
+                  nekünk is ez volt a célunk
+                </a>
+              </strong>. Azzal, hogy elküldted a weboldalt, máris hozzátettél a világhoz, ezzel a rád háruló
+              résszel meg is vagy. Dőlj hátra nyugodtan és ha van még két perced, akkor olvasd el, hogy hogyan működünk.
+            </p>
           </div>
         </div>
       </div>
     </div>
 
     <div id="next-steps-content" class="container details">
-      <div class="content">
-        <div class="tile is-ancestor">
-          <div class="tile is-parent">
-            <div id="derp-bench-content" class="tile is-child box">
-              <h2 class="title">Maradt még benned?</h2>
-              <p>Nem múlt el a feszültség? Pont van nálunk egy <strong>derpegő lóca</strong> és egy szabad szöveges mező.</p>
-              <p>Íme, kérlek foglalj helyet,</p>
-              <br>
-              <p class="has-text-centered">
-                <img id="derp-bench-image" alt="derp-bench" src="images/bench/derp-bench.png">
-              </p>
-              <div class="field">
-                <label class="">és nyugodtan adj ki magadból mindent.</label>
-                <div class="control">
-                  <textarea class="textarea input-opaque" rows="9"></textarea>
-                </div>
-              </div>
-              <p>A jó hír, hogy ezt nem fogjuk elküldeni <em>senkinek</em>. Csak úgy itt hagyhatod. Tényleg.</p>
-              <div class="field">
-                <div class="control">
-                  <a class="button is-link is-fullwidth">Na!</a>
+      <div class="columns">
+        <div class="content">
+
+          <div class="column is-8 is-offset-2">
+
+            <div id="details-all" class="tile is-ancestor">
+              <div class="tile is-parent">
+                <div class="tile is-child box">
+                  <div id="details-launch">
+                    <h2 class="title">Tudtad, hogy segítettél?</h2>
+                    <p>
+                      <strong>Bizony ám. </strong>
+                    </p>
+                  </div>
+                  <div id="details-fix">
+                    <h2 class="title">Hogyan segítettem ezzel?</h2>
+                  </div>
+
+                  <p>
+                    Találtál egy csúnya vagy nem működő weboldalt? Remek! A <strong><a href="https://codeberryschool.com/hu?utm_source=webrendorseg.hu" target="_blank">CodeBerry School</a></strong> programozóiskolában
+                    diákok ezrei várnak arra, hogy megjavítsák vagy újratervezzék <strong>teljesen ingyen.</strong>
+                    <br><br>
+                    <strong>Ez miért jó?</strong>
+                    <br>
+                    Tanulni sokkal élvezetesebb, ha való életből merített izgalmas projekteken keresztül gyakorlunk. Plusz minden így keletkező projektmunkát
+                    <strong>visszaküldünk az eredeti tulajdonosának</strong>, abban bízva, hogy lecseréli a régi oldalt és ezzel kevesebb bosszúságot
+                    okoz a világnak. <strong>Win-win.</strong>
+                    <br><br>
+                    Egy botrányosan rossz weboldal így egy kiváló lehetőség a diákjaink számára. Szóval ha ilyet küldtél, az aranyat ér.
+                    Könnyen lehet, hogy pont az általad beküldött oldal lesz a következő amit megjavítunk. Jó, nem? De. Naugye.
+                  </p>
+
+                  <h2 class="title">Szeretnél még segíteni?</h2>
+                  <p>Ha tetszik az oldal vagy a kezdeményezés, segít, ha megosztod. Minél több weboldalt kapunk, annál többet tudunk megjavítani és a
+                    a diákjaink és annál izgalmasabb projektekkel foglalkozhatnak. Mindenki nyer.
+                    <br><br>
+                    Szimplán másold be az oldal címét az üzenetedbe, a többit a robotok megoldják: <strong>https://napbalonem.hu</strong>. Köszi ❤️
+                    <br><br>
+                    Ha csak egy <a href="https://giphy.com/search/kittens" target="_blank">cicás GIF</a> választ el a megosztástól, ezen ne múljon.
+                  </p>
+
+                  <h2 class="title">Esetleg maradt még benned?</h2>
+
+                  <p>Nagyon kiakasztott az oldal? Nem múlt el a feszültség? Pont van nálunk egy <strong>derpegő lóca</strong> és egy szabad szöveges mező.</p>
+                  <p>Íme, kérlek foglalj helyet,</p>
+                  <br>
+                  <p class="has-text-centered">
+                    <img class="derp-bench-image" alt="derp-bench" src="images/bench/derp-bench.png">
+                  </p>
+                  <div class="field">
+                    <label class="">és nyugodtan adj ki magadból mindent.</label>
+                    <div class="control">
+                      <textarea class="textarea input-opaque" rows="6"></textarea>
+                    </div>
+                  </div>
+                  <p>Csak úgy itt hagyhatod. Tényleg. Egyből küldjük ezt is a napba. Becsszó.</p>
                 </div>
               </div>
             </div>
-               
-          </div>
-          <div class="tile is-parent">
-            <div id="help-content" class="tile is-child box">
-              <h2 class="title">Tudtad, hogy segítettél?</h2>
-              <p>
-                <strong>Bizony ám. </strong>
-                <br><br>
-                A <strong><a href="https://codeberryschool.com/hu?utm_source=napbalonem.hu" target="_blank">CodeBerry School</a></strong> programozóiskolában
-                <em>diákok ezrei</em> várnak arra, hogy a való életből merített izgalmas projekteken gyakorolják a webfejlesztés alapjait.
-                Az így újratervezett oldalakat aztán <strong>visszaküldjük az eredeti tulajdonosoknak</strong>, abban bízva, hogy lecserélik a régit
-                és ezzel kevesebb bosszúságot okoznak a világnak. <strong>Mindezt teljesen ingyen.</strong>
-                <br><br>
-                Egy botrányosan rossz weboldal így egy kiváló lehetőség a diákjaink számára. Szóval ha ilyet találtál, az aranyat ér, sőt, könnyen
-                lehet, hogy pont az általad beküldött oldal lesz a következő amit megjavítunk. Jó, nem? De. Naugye.</p>
-              <h2>Szeretnél még segíteni?</h2>
-              <p>Ha tetszik az oldal vagy a kezdeményezés, segít, ha megosztod. Minél több helyre jutunk el, annál több értéket tudnak teremteni a diákjaink és annál több értéket kapnak ők is. Win-win.
-                <br><br>
-                Szimplán másold be az url-t az üzenetedbe, a többit a robotok megoldják: <strong>https://napbalonem.hu</strong>. Köszi ❤️
-                <br><br>
-                Ha csak egy <a href="https://giphy.com/search/kittens" target="_blank">cicás GIF</a> választ el a megosztástól, ezen ne múljon.
-              </p>
-            </div>  
+
           </div>
         </div>
       </div>
     </div>
-
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Burn The Web</strong> made with 🔥by <a href="https://laszlobekessy.me">László Békéssy</a>.
+        <strong>Sites Against Humanity</strong> made with 🔥by <a href="https://laszlobekessy.me">László Békéssy</a>.
         <br>
-        The website content
-        is licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>. 
+        The website content is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
         <br>
-        <em style="font-size: .8em">
-          We use no cookies, and we don't store your personal data.
-          <br>
-          Traffic based data will be shared with Google and Facebook. This is our policy.
+        <em>
+          <small>
+            We use no cookies, and we don't store your personal data.
+            <br>
+            Traffic based data will be shared with Google and Facebook. This is our policy.
+          </small>
         </em>
       </p>
     </div>
