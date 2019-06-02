@@ -21,7 +21,7 @@ function handleAction(action) {
     }
 
     /* Handle input form */
-    handleInputForm();
+    handleInputForm(action);
 
     /* Show success */
     showSuccess(action);
@@ -49,9 +49,18 @@ const launchRocket = function () {
 };
 
 /**
- * Handles the input form
+ * @param {String} action The action
  */
-const handleInputForm = function () {
+const handleInputForm = function (action) {
+  /* Change hidden inputs */
+  if (action === ACTION_LAUNCH) {
+    const burnInput = document.getElementById("burn");
+    burnInput.value = 'TRUE';
+  } else {
+    const fixInput = document.getElementById("fix");
+    fixInput.value = 'TRUE';
+  }
+
   /* Hide form */
   const inputForm = document.getElementById("input-form");
   inputForm.classList.add('disappear');
