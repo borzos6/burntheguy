@@ -1,0 +1,18 @@
+/* BLACK HOLE */
+.black-hole {
+  position: absolute;
+  right: -95px;
+  top: -10px;
+  z-index: 5;
+  opacity: 0;
+}
+
+.grow {
+  animation: grow 400s linear forwards;
+}
+
+@keyframes grow {
+  0% { transform: rotate(0deg); opacity: 0; }
+  5% { transform: rotate(179deg); opacity: 1; }
+  100% { transform: rotate(3590deg) scale(100); opacity: 1 }
+}

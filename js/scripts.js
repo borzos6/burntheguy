@@ -8,11 +8,15 @@ function handleAction(action) {
   /* Data validation */
   const websiteInput = document.getElementById("website");
   if (!websiteInput.value) {
-    /* Shake the input */
-    websiteInput.classList.add('shake');
-    setTimeout(function () {
-      websiteInput.classList.remove('shake');
-    }, 800);
+    /* Shake input */
+    shakeElement(websiteInput);
+  } else if (websiteInput.value.indexOf('napbalonem.hu')  > -1){
+    /* Summon black hole */
+    summonBlackHole();
+    /* Handle input form */
+    handleInputForm(action);
+    /* Show end of the world */
+    showEndOfTheWorld();
 
   } else {
     /* Launch rocket */
@@ -46,6 +50,25 @@ const launchRocket = function () {
   const rocketSmoke = document.getElementById("rocket-smoke");
   rocketSmoke.classList.remove('rocket-smoke');
   rocketSmoke.classList.add('rocket-smoke-flying');
+};
+
+/**
+ * Handles the rocket launch
+ */
+const summonBlackHole = function () {
+  const blackHole = document.getElementById("black-hole");
+  blackHole.classList.add('grow');
+};
+
+/**
+ * @param {Object} element The element
+ */
+const shakeElement = function (element) {
+  /* Shake the input */
+  element.classList.add('shake');
+  setTimeout(function () {
+    element.classList.remove('shake');
+  }, 800);
 };
 
 /**
@@ -118,5 +141,29 @@ const showNextSteps = function (action) {
   const nextStepsContent = document.getElementById("next-steps-content");
   setTimeout(() => {
     nextStepsContent.classList.add('appear');
+  }, timeoutInMilliSeconds);
+};
+
+
+/**
+ * Shows the end of the world block
+ */
+const showEndOfTheWorld = function () {
+  let timeoutInMilliSeconds = 100;
+
+  /* Hide the unnecessary container */
+  const successFix = document.getElementById("success-fix");
+  successFix.classList.add('is-hidden');
+  const successLaunch = document.getElementById("success-launch");
+  successLaunch.classList.add('is-hidden');
+
+  /* Show the container */
+  const endOfTheWorld = document.getElementById("end-of-the-world");
+  endOfTheWorld.classList.remove('is-hidden');
+
+  /* Fade in the whole block */
+  const successContainer = document.getElementById("success");
+  setTimeout(() => {
+    successContainer.classList.add('appear');
   }, timeoutInMilliSeconds);
 };
