@@ -106,14 +106,14 @@ const showSuccess = function (action) {
     const successFix = document.getElementById("success-fix");
     successFix.classList.add('is-hidden');
     const endOfTheWorld = document.getElementById("end-of-the-world");
-    endOfTheWorld.classList.remove('is-hidden');
+    endOfTheWorld.classList.add('is-hidden');
     /* Add timeout */
     timeoutInMilliSeconds = 2500;
   } else {
     const successLaunch = document.getElementById("success-launch");
     successLaunch.classList.add('is-hidden');
     const endOfTheWorld = document.getElementById("end-of-the-world");
-    endOfTheWorld.classList.remove('is-hidden');
+    endOfTheWorld.classList.add('is-hidden');
   }
 
   /* Fade in the whole block */
@@ -155,15 +155,11 @@ const showNextSteps = function (action) {
 const showEndOfTheWorld = function () {
   let timeoutInMilliSeconds = 100;
 
-  /* Hide the unnecessary container */
+  /* Hide the unnecessary containers */
   const successFix = document.getElementById("success-fix");
   successFix.classList.add('is-hidden');
   const successLaunch = document.getElementById("success-launch");
   successLaunch.classList.add('is-hidden');
-
-  /* Show the container */
-  const endOfTheWorld = document.getElementById("end-of-the-world");
-  endOfTheWorld.classList.remove('is-hidden');
 
   /* Fade in the whole block */
   const successContainer = document.getElementById("success");
