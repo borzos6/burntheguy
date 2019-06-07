@@ -10,7 +10,7 @@ function handleAction(action) {
   if (!websiteInput.value) {
     /* Shake input */
     shakeElement(websiteInput);
-  } else if (websiteInput.value.indexOf('napbalonem.hu')  > -1){
+  } else if (websiteInput.value.toLowerCase().indexOf('napbalonem.hu')  > -1){
     /* Summon black hole */
     summonBlackHole();
     /* Handle input form */
@@ -105,11 +105,15 @@ const showSuccess = function (action) {
   if (action === ACTION_LAUNCH) {
     const successFix = document.getElementById("success-fix");
     successFix.classList.add('is-hidden');
+    const endOfTheWorld = document.getElementById("end-of-the-world");
+    endOfTheWorld.classList.remove('is-hidden');
     /* Add timeout */
     timeoutInMilliSeconds = 2500;
   } else {
     const successLaunch = document.getElementById("success-launch");
     successLaunch.classList.add('is-hidden');
+    const endOfTheWorld = document.getElementById("end-of-the-world");
+    endOfTheWorld.classList.remove('is-hidden');
   }
 
   /* Fade in the whole block */

@@ -1,10 +1,11 @@
 /* BLACK HOLE */
 .black-hole {
   position: absolute;
-  right: -95px;
-  top: -10px;
-  z-index: 5;
+  right: 0;
+  top: 85px;
+  z-index: -5;
   opacity: 0;
+  height: 215px;
 }
 
 .grow {
