@@ -10,7 +10,7 @@ function handleAction(action) {
   if (!websiteInput.value) {
     /* Shake input */
     shakeElement(websiteInput);
-  } else if (websiteInput.value.toLowerCase().indexOf('napbalonem.hu')  > -1){
+  } else if (websiteInput.value.toLowerCase().indexOf('napbalonem.net')  > -1){
     /* Summon black hole */
     summonBlackHole();
     /* Handle input form */
